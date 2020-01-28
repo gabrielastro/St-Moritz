@@ -6,7 +6,8 @@
 # The function Rp_from_Mdot_Mp_Popsynthfit(Mdot,Mp,warmPop) returns the fit,
 # given in Aoyama, Marleau, Mordasini & Ikoma (2020),
 # to the radius as a function of accretion rate Mdot and planet mass Mp
-# for the cold- (Pop='cold') or warm-start (Pop='warm') population.
+# for the cold- (Pop='cold') or warm-start (Pop='warm') populations
+# of Mordasini et al. (2012).
 # The fit is valid for approximately (please see the paper):
 # 
 #          1 MJ <  Mp  < 30 MJ
