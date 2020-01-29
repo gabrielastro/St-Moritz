@@ -53,23 +53,38 @@ end
 ; simple test routine
 ; 
 pro test_Rp_fit, mode, Pop
-    
-    th=2
-    cs=1.7
+    th=1.7
+    cs=2
     
     ; plot with Mdot on the x axis
     if (mode eq 'Mdot') then begin
         MM = [20, 15, 10, 5, 3, 1]
-        x = 0.5 + (30.-0.5)/500.*dindgen(501)
+        Mdot = 10^(-5. + (-1+5)/50.*dindgen(51))
         
-        ; set-up
-        plot, [1],[1], /nodata, /xst,/yst, /xlog, xrange=[1e-5,1e-2], /ylog, yrange=[1,8], chars=cs, $
-            xtit=textoidl('!6dM/dt (M_E/yr)'), ytit=textoidl('Radius (R_J)'),xth=th,yth=th, tit=Pop
+        ; set up plot
+        plot, [1],[1], /nodata, /xst,/yst, /xlog, xrange=[1e-5,1e-1], /ylog, yrange=[1,8], yticks=3,ytickv=[1,2,4,8], $
+            xtit=textoidl('!6dM/dt (M_E/yr)'), ytit=textoidl('Radius (R_J)'),xth=th,yth=th, chars=cs, tit=Pop
         
         ; plot each mass
-        for i=1,n_elements(MM)-1 do begin
-            oplot, Rp_from_Mdot_Mp_Popsynthfit(x, MM[i], Pop), thick=th
+        for i=0,n_elements(MM)-1 do begin
+            Rp = Rp_from_Mdot_Mp_Popsynthfit(Mdot, MM[i], Pop)
+            oplot, Mdot, Rp, thick=th
         endfor
     endif
     
+    ; plot with Mp on the x axis
+    if (mode eq 'Mp') then begin
+        Mdot = [2e-2, 1e-2, 1e-3, 1e-4, 1e-5]
+        MM = 0.5 + (30.-0.5)/50.*dindgen(51)
+
+        ; set up plot
+        plot, [1],[1], /nodata, /xst,/yst, xrange=[0,30], /ylog, yrange=[1,8], yticks=3,ytickv=[1,2,4,8], $
+            xtit=textoidl('!6Mass (M_J)'), ytit=textoidl('Radius (R_J)'),xth=th,yth=th, chars=cs, tit=Pop
+          
+        ; plot each accretion rate
+        for i=0,n_elements(Mdot)-1 do begin
+            Rp = Rp_from_Mdot_Mp_Popsynthfit(Mdot[i], MM, Pop)
+            oplot, MM, Rp, thick=th
+        endfor
+    endif
 end
