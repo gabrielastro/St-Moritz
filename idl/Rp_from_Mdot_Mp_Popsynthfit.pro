@@ -19,13 +19,11 @@
 ; -- Output --
 ;     RP: in RJ = 7.15e9 cm
 ; 
-; To test the function, you can use the macros in the following way
-; (ACHTUNG: will call "reset" first!):
+; To test the function, you can do the following:
 ; 
-; gnuplot> load "./Rp_from_Mdot_Mp_Popsynthfit.gnu"
-; gnuplot> set macros
-; gnuplot> @test_Rp_fit_Mdot_warm
-; gnuplot> @test_Rp_fit_Mp_cold
+; .com Rp_from_Mdot_Mp_Popsynthfit.gnu
+; 
+; test_Rp_fit, mode='Mdot',Pop='warm'
 ; 
 ; If you use this function, please cite: Aoyama et al. (2020). Thank you!
 ; 
@@ -54,13 +52,13 @@ end
 
 ; simple test routine
 ; 
-pro test_Rp_fit, Mode='Mdot', Pop='warm'
+pro test_Rp_fit, mode, Pop
     
     th=2
-    cs=1.4
+    cs=1.7
     
     ; plot with Mdot on the x axis
-    if (Mode eq 'Mdot') then begin
+    if (mode eq 'Mdot') then begin
         MM = [20, 15, 10, 5, 3, 1]
         x = 0.5 + (30.-0.5)/500.*dindgen(501)
         
