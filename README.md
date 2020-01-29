@@ -7,4 +7,4 @@ Suite of Tools to Model Observations of accRetIng planeTZ
 
 The files are organised by language (gnuplot, idl, python).
 
-1. Rp_from_Mdot_Mp_Popsynthfit.*: planet radius as a function of accretion rate and mass, from the population syntheses of Mordasini et al. (2012)
+1. `Rp_from_Mdot_Mp_Popsynthfit.*`: planet radius as a function of accretion rate and mass, from the population syntheses of Mordasini et al. (2012), as fit by Aoyama, Marleau, Mordasini & Ikoma (2020, in prep.)
