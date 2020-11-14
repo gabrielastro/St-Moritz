@@ -1,7 +1,6 @@
 _Saint-Maurice, commander of the Theban legion_
 
-# St-Moritz
-_Suite of Tools to Model Observations of accRetIng planeTZ_
+# `St-Moritz`: Suite of Tools to Model Observations of accRetIng planeTZ
 
 This collects a few simple functions or scripts that can be useful for studying accreting (forming) planets.
 
