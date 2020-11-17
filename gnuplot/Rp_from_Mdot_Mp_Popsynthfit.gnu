@@ -28,12 +28,19 @@
 # gnuplot> @test_Rp_fit_Mdot_warm
 # gnuplot> @test_Rp_fit_Mp_cold
 # 
-# If you use this function, please cite: Aoyama et al. (2020). Thank you!
+# If you use this function, please cite:
+# 
+#   Aoyama, Marleau, Mordasini & Ikoma (subm.)
+#   Spectral appearance of the planetary surface accretion shock:
+#     Global spectra and hydrogen line profiles and fluxes
+#   https://arxiv.org/abs/2011.06608
+# 
+# Thank you!
 # 
 # Comments and requests welcome!
 # 
 # Gabriel-Dominique Marleau (c) February 2020
-# gabriel.marleau@uni-tuebingen.de, gabriel.marleau@space.unibe.ch
+# gabriel.marleau@uni-tuebingen.de
 # 
 # -------------------------------------------------------------
 # 

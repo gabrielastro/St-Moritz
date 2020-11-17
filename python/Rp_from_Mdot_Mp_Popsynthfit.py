@@ -19,7 +19,14 @@
 # -- Output --
 #     RP: in RJ = 7.15e9 cm
 # 
-# If you use this function, please cite: Aoyama et al. (2020). Thank you!
+# If you use this function, please cite:
+#   
+#   Aoyama, Marleau, Mordasini & Ikoma (subm.)
+#   Spectral appearance of the planetary surface accretion shock:
+#     Global spectra and hydrogen line profiles and fluxes
+#   https://arxiv.org/abs/2011.06608
+#   
+# Thank you!
 # 
 # Comments and requests welcome!
 # 
