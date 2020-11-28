@@ -30,6 +30,7 @@
 # -- Input --
 #   Mdot: in ME/yr = 1.893e20 g/s
 #     Mp: in MJ = 1.898e30 g
+#    Pop: 'warm' or 'cold'
 # 
 # -- Output --
 #     Rp: in RJ = 7.15e9 cm
