@@ -165,7 +165,7 @@ def test_RpTeff_fit(mode, Pop='warm', ffill=1.0, Tint=1000.0):
 	"""
 	
 	## on the command line:
-	#import Rp_from_Mdot_Mp_Popsynthfit as pf
+	#import RpTeff_from_Mdot_Mp_fit as RTfit
 	# ...
 	#import importlib
 	#importlib.reload(pf)
